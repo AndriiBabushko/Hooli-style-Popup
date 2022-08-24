@@ -1,0 +1,124 @@
+@keyframes nav-animation {
+  from {
+    transform: scale(1); }
+  50% {
+    transform: scale(1.2);
+    filter: invert(54%) sepia(4%) saturate(14%) hue-rotate(1deg) brightness(93%) contrast(91%); }
+  to {
+    transform: scale(1); } }
+
+@keyframes logo-animation {
+  from {
+    transform: scale(1); }
+  50% {
+    transform: scale(1.2); }
+  to {
+    transform: scale(1); } }
+
+* {
+  padding: 0;
+  margin: 0; }
+
+a {
+  cursor: pointer; }
+
+/* Page wrapper */
+.wrapper .header {
+  background-color: #DBC7B5;
+  border: 2px solid grey;
+  border-radius: 0 0 15% 15%;
+  height: 65px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 50; }
+  .wrapper .header .header__container {
+    margin: 0 25px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    column-gap: 25px; }
+    .wrapper .header .header__container .header__menu .menu__list {
+      list-style-type: none;
+      display: flex;
+      align-items: center;
+      column-gap: 20px; }
+      .wrapper .header .header__container .header__menu .menu__list .menu__item {
+        display: flex;
+        /* Popup*/ }
+        .wrapper .header .header__container .header__menu .menu__list .menu__item .menu__link {
+          display: flex; }
+        .wrapper .header .header__container .header__menu .menu__list .menu__item img, .wrapper .header .header__container .header__menu .menu__list .menu__item label {
+          width: 35px;
+          height: 35px; }
+          .wrapper .header .header__container .header__menu .menu__list .menu__item img:hover, .wrapper .header .header__container .header__menu .menu__list .menu__item label:hover {
+            animation: nav-animation 2s infinite; }
+        .wrapper .header .header__container .header__menu .menu__list .menu__item .check__input {
+          position: absolute;
+          appearance: none;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          width: 35px;
+          height: 35px; }
+        .wrapper .header .header__container .header__menu .menu__list .menu__item .check__box {
+          width: 1em;
+          height: 1em; }
+          .wrapper .header .header__container .header__menu .menu__list .menu__item .check__box:hover {
+            background-color: #7f7f7f;
+            border-radius: 50%;
+            opacity: 80%; }
+        .wrapper .header .header__container .header__menu .menu__list .menu__item .menu__popup {
+          overflow-y: scroll;
+          position: absolute;
+          top: 80px;
+          right: 20px;
+          z-index: -1;
+          border: 2px solid #CB8658;
+          border-radius: 2.5%;
+          width: 400px;
+          max-height: 300px; }
+          .wrapper .header .header__container .header__menu .menu__list .menu__item .menu__popup::-webkit-scrollbar {
+            width: 8px; }
+          .wrapper .header .header__container .header__menu .menu__list .menu__item .menu__popup::-webkit-scrollbar-thumb {
+            background-color: #CB8658;
+            border-radius: 15px; }
+          .wrapper .header .header__container .header__menu .menu__list .menu__item .menu__popup .submenu__list {
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            overflow: auto; }
+            .wrapper .header .header__container .header__menu .menu__list .menu__item .menu__popup .submenu__list .submenu__item {
+              text-align: center;
+              display: flex;
+              flex-direction: column;
+              margin: 10px;
+              flex: 1; }
+              .wrapper .header .header__container .header__menu .menu__list .menu__item .menu__popup .submenu__list .submenu__item .submenu__link {
+                text-decoration: none;
+                color: #c59c75; }
+                .wrapper .header .header__container .header__menu .menu__list .menu__item .menu__popup .submenu__list .submenu__item .submenu__link img {
+                  border: 2px solid black;
+                  border-radius: 50%;
+                  overflow: hidden;
+                  width: 75px;
+                  height: 75px; }
+    .wrapper .header .header__container .header__avatar {
+      display: flex;
+      align-items: center;
+      padding: 5px; }
+      .wrapper .header .header__container .header__avatar img {
+        border-radius: 50%;
+        width: 50px;
+        height: 50px; }
+        .wrapper .header .header__container .header__avatar img:hover {
+          animation: logo-animation 3s infinite; }
+
+/*  Block main */
+.main {
+  background-color: #F2F2F4;
+  border: 2px solid lightgrey;
+  height: 90vh; }
+  .main .content {
+    position: relative;
+    top: 80px; }

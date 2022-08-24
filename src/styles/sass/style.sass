@@ -1,0 +1,142 @@
+@import 'colors', 'animations'
+
+*
+  // outline: 1px solid red
+  padding: 0
+  margin: 0
+
+a
+  cursor: pointer
+
+/* Page wrapper */
+.wrapper
+  // margin: 0 25px
+  .header
+    background-color: nth($second-colors, 2)
+    border: 2px solid grey
+    border-radius: 0 0 15% 15%
+    height: 65px
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    z-index: 50
+
+    .header__container
+      margin: 0 25px
+      display: flex
+      justify-content: flex-end
+      align-items: center
+      column-gap: 25px
+
+      .header__menu
+
+        .menu__list
+          list-style-type: none
+          display: flex
+          align-items: center
+          column-gap: 20px
+
+          .menu__item
+            display: flex
+
+            .menu__link
+              display: flex
+
+            img, label
+              width: 35px
+              height: 35px
+
+              &:hover
+                // white
+                // filter: invert(100%) sepia(7%) saturate(27%) hue-rotate(331deg) brightness(103%) contrast(107%)
+                // grey
+                animation: nav-animation 2s infinite
+
+            .check__input
+              position: absolute
+              appearance: none
+              -webkit-appearance: none
+              -moz-appearance: none
+              width: 35px
+              height: 35px
+
+            .check__box
+              width: 1em
+              height: 1em
+
+              &:hover
+                background-color: #7f7f7f
+                border-radius: 50%
+                opacity: 80%
+
+            /* Popup*/
+
+
+            .menu__popup
+              overflow-y: scroll
+              // display: none
+              position: absolute
+              top: 80px
+              right: 20px
+              z-index: -1
+              border: 2px solid nth($main-colors, 2)
+              border-radius: 2.5%
+              width: 400px
+              max-height: 300px
+
+              &::-webkit-scrollbar
+                width: 8px
+
+              &::-webkit-scrollbar-thumb
+                background-color: nth($main-colors, 2)
+                border-radius: 15px
+
+              .submenu__list
+                display: flex
+                justify-content: space-evenly
+                flex-wrap: wrap
+                overflow: auto
+
+
+                .submenu__item
+                  text-align: center
+                  display: flex
+                  flex-direction: column
+                  margin: 10px
+                  flex: 1
+
+                  .submenu__link
+                    text-decoration: none
+                    color: nth($second-colors, 4)
+
+                    img
+                      border: 2px solid black
+                      border-radius: 50%
+                      overflow: hidden
+                      width: 75px
+                      height: 75px
+
+      .header__avatar
+        display: flex
+        align-items: center
+        padding: 5px
+
+        img
+          border-radius: 50%
+          width: 50px
+          height: 50px
+
+          &:hover
+            animation: logo-animation 3s infinite
+
+/*  Block main */
+.main
+  background-color: nth($second-colors, 1)
+  border: 2px solid lightgrey
+  height: 90vh
+
+  .content
+    position: relative
+    top: 80px
+
