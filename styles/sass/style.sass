@@ -4,9 +4,6 @@
   // outline: 1px solid red
   padding: 0
   margin: 0
-  &::-webkit-scrollbar
-    width: 10px
-
   &::-webkit-scrollbar-thumb
     background-color: grey
 
@@ -188,9 +185,12 @@ img
 
 .footer
   background-color: nth($second-colors, 3)
-  height: 90px
+  height: 65px
   font-family: 'Dancing Script', cursive
   font-size: 36px
+  display: flex
+  justify-content: center
+  align-items: center
 
 .footer__container
   display: flex
@@ -201,8 +201,38 @@ img
 .copyright
   text-decoration: none
   color: nth($main-colors, 4)
+@media (max-width: 450px)
+  .header
+    display: flex
+    justify-content: center
+  .header__container
+    margin: 0
+    scroll-snap-type: x mandatory
+    gap: 12px
+    width: 95%
+    height: 100%
+  .menu__list
+    width: 220px
+    overflow-x: scroll
+    overflow-y: hidden
+    // border: 1px solid black
+    &::-webkit-scrollbar
+     height: 8px
+    &::-webkit-scrollbar-thumb
+      background-color: black
+      border-radius: 10px
+      width: 5px
+    &::-webkit-scrollbar-corner
+      display: none
+    &::-webkit-scrollbar-track
+      border: 1px solid black
+      border-radius: 10px
 
-@media (max-width: 500px)
   .menu__popup
     width: 230px
-    
+  .footer
+    font-size: 32px
+
+@media (max-width: 350px)
+  .menu__list
+    width: 165px
