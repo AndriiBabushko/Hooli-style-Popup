@@ -46,10 +46,14 @@ body
 .menu__link
   display: flex
 
-img
+.menu__img, .see-more-button__img
   width: 35px
   height: 35px
 
+  &:hover
+    animation: nav-animation 2s infinite
+
+.submenu__img, .sub-popup__img
   &:hover
     animation: nav-animation 2s infinite
 
@@ -108,7 +112,7 @@ img
     text-decoration: underline
     color: nth($main-colors, 5)
 
-  img
+  .submenu__img, .menu__img, .submenu__img, .see-more-button__img, .sub-popup__img
     border: 2px solid black
     border-radius: 50%
     overflow: hidden
@@ -129,7 +133,7 @@ img
   justify-content: center
   flex-wrap: wrap
 
-  label
+  .see-more-button__label
     display: flex
     justify-content: center
     width: 95%
@@ -147,7 +151,7 @@ img
     ~ .sub-popup
       display: block
 
-    ~ label > img
+    ~ .see-more-button__label .see-more-button__img
       animation: one_time_180_rotate 1.5 ease
       transform: rotate(180deg)
 
@@ -159,7 +163,7 @@ img
   align-items: center
   padding: 5px
 
-  img
+  .header__img
     border-radius: 50%
     width: 50px
     height: 50px
