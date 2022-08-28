@@ -3,6 +3,7 @@
 *
   padding: 0
   margin: 0
+
   &::-webkit-scrollbar-thumb
     background-color: grey
 
@@ -200,6 +201,7 @@ img
 .copyright
   text-decoration: none
   color: nth($main-colors, 4)
+
 @media (max-width: 450px)
   .header
     display: flex
@@ -213,16 +215,19 @@ img
   .menu__list
     width: 220px
     overflow-x: scroll
-    // overflow-y: hidden
-    // border: 1px solid black
+    overflow-y: hidden
+
     &::-webkit-scrollbar
-     height: 8px
+      height: 8px
+
     &::-webkit-scrollbar-thumb
       background-color: black
       border-radius: 10px
       width: 5px
+
     &::-webkit-scrollbar-corner
       display: none
+
     &::-webkit-scrollbar-track
       border: 1px solid black
       border-radius: 10px

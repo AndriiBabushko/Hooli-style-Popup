@@ -276,6 +276,7 @@ img:hover {
   .menu__list {
     width: 220px;
     overflow-x: scroll;
+    overflow-y: hidden;
   }
   .menu__list::-webkit-scrollbar {
     height: 8px;
