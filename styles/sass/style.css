@@ -271,13 +271,11 @@ img:hover {
     margin: 0;
     scroll-snap-type: x mandatory;
     gap: 12px;
-    width: 95%;
     height: 100%;
   }
   .menu__list {
     width: 220px;
     overflow-x: scroll;
-    overflow-y: hidden;
   }
   .menu__list::-webkit-scrollbar {
     height: 8px;
